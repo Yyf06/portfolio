@@ -33,6 +33,8 @@ contactEmail.verify((error) => {
 });
 
 router.post("/contact", (req, res) => {
+  console.log("Request received at /contact");
+  console.log("Request body:", req.body);
   const name = req.body.firstName + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
