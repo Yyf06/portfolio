@@ -157,7 +157,9 @@ export const Projects = () => {
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                       <Tab.Pane eventKey="first">
-                        <p>Fitness Go is an IOS game that encourages healthy living through gacha mechanism. By integrating with Apple HealthKit, this game converts physical activities, such as walking or running tracked via smartphones or smartwatches, into in-game currency. The currency is then used to draw equipment from gacha wheel to enhance game performance. It also has an auto-battler system and competition system where users can compare their progress with their friends, which fosters a sense of community and motivates users to exercise more."</p>
+                        <p>Fitness Go is an IOS game that encourages healthy living through gacha mechanism. By integrating with Apple HealthKit, this game converts physical activities, such as walking or running tracked via smartphones or smartwatches, into in-game currency. The currency is then used to draw equipment from gacha wheel to enhance game performance. It also has an auto-battler system and competition system where users can compare their progress with their friends, which fosters a sense of community and motivates users to exercise more."
+                          <br /><strong className="tech">SwiftUI + Swift</strong>
+                        </p>
                         <Row>
                           {
                             projects.map((project, index) => {
@@ -173,6 +175,7 @@ export const Projects = () => {
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                         <p>The main goal of the website is to help teenagers quickly find sports activities that interest them, leveraging Open Data API from the Brisbane City Council. We aim to promote the healthy and happy growth of teenagers through increased participation in activities.
+                          <br /><strong className="tech">Javascript, API </strong>
                           <li> Integration with API for up-to-date event</li>
                           <li>Event category filter</li>
                           <li>Event keywords search</li>
@@ -195,9 +198,10 @@ export const Projects = () => {
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
                         <p>MenuScanOrder is a SaaS solution designed to make ordering at a restaurant or cafe more
-                          efficient, considering both the perspectives of business owners and customers.
+                          efficient, considering both the perspectives of business owners and customers.<br />
+                          <strong className="tech"> Bootstrap, PHP RESTful APIs</strong>
                           <li>Digital Menu Creation</li>
-                          <li>AI-generated dish description</li>
+                          <li>Powered by Claudie AI, auto-generated dish description</li>
                           <li>Menu Editing and Management</li>
                           <li>QR Generation for Each Table</li>
                           <li>Scan and Ordering</li>
@@ -217,7 +221,9 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="forth">
+                        <p><strong className="tech">Python</strong></p>
                         <video width="100%" height="400px" controls>
+
                           <source src={farmVideo} type="video/mp4" />
                           Your browser does not support the video tag. Please download the video
                           <a href={farmVideo}>here</a>.
@@ -225,7 +231,9 @@ export const Projects = () => {
                       </Tab.Pane>
 
                       <Tab.Pane eventKey="fifth">
+                        <p><strong className="tech">JAVA</strong></p>
                         <Row>
+
                           {
                             projects4.map((project, index) => {
                               return (
