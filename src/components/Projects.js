@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav, TabPane } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import { fg1, f1, fg2, fg3, fg5, fg6, fg7, fg8, fg9 } from "../assets/img";
 import { t1, t2, t3, t5, t6 } from "../assets/img";
-import { m1, m2, m3, m4, maze1, maze2 } from "../assets/img";
+import { m1, m2, m3, m4, maze1, maze2, smartPark } from "../assets/img";
 import farmVideo from '../assets/videos/farm.mp4';
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -10,6 +10,15 @@ import TrackVisibility from 'react-on-screen';
 import { useState } from "react";
 
 export const Projects = () => {
+
+  const projectSmart = [
+    {
+      title: "Smart Park",
+      description: "",
+      imgUrl: smartPark,
+
+    }
+  ]
 
   const projects = [
     {
@@ -120,6 +129,7 @@ export const Projects = () => {
     }
   ]
 
+
   const [activeKey, setActiveKey] = useState("first");
   const tabDescriptions = {
     first: "Fitness Go is an IOS game that encourages healthy living through gacha mechanism. By integrating with Apple HealthKit, this game converts physical activities, such as walking or running tracked via smartphones or smartwatches, into in-game currency. The currency is then used to draw equipment from gacha wheel to enhance game performance. It also has an auto-battler system and competition system where users can compare their progress with their friends, which fosters a sense of community and motivates users to exercise more.",
@@ -140,10 +150,13 @@ export const Projects = () => {
                   <Tab.Container id="projects-tabs" defaultActiveKey="first" onSelect={(k) => setActiveKey(k)}>
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
+                        <Nav.Link eventKey="smart">Smart Park</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
                         <Nav.Link eventKey="first">Fitness Go</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">TeenAthletics</Nav.Link>
+                        <Nav.Link eventKey="second">Teen Athletics</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="third">MenuScanOrder</Nav.Link>
@@ -156,6 +169,26 @@ export const Projects = () => {
                       </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                      <Tab.Pane eventKey="smart">
+                        <p>A smart park, simply put, is a modern, high-tech area that uses advanced technology to make things run more smoothly.
+
+                          Picture walking into a park where everything—like lighting, security, and energy use—runs automatically. For example, the energy system adapts to how much electricity is being used to save power and reduce costs. The security cameras can watch over the area and even spot suspicious activity to trigger an alarm if needed.
+
+                          A smart park can also manage services like parking, booking meeting rooms, and even landscaping irrigation through apps and smart devices. In short, by integrating technology, a smart park makes operations more efficient and eco-friendly, improving the overall quality of life and work within the park
+                        </p>
+                        <Row>
+                          {
+                            projectSmart.map((project, index) => {
+                              return (
+                                <ProjectCard className="smart"
+                                  key={index}
+                                  {...project}
+                                />
+                              )
+                            })
+                          }
+                        </Row>
+                      </Tab.Pane>
                       <Tab.Pane eventKey="first">
                         <p>Fitness Go is an IOS game that encourages healthy living through gacha mechanism. By integrating with Apple HealthKit, this game converts physical activities, such as walking or running tracked via smartphones or smartwatches, into in-game currency. The currency is then used to draw equipment from gacha wheel to enhance game performance. It also has an auto-battler system and competition system where users can compare their progress with their friends, which fosters a sense of community and motivates users to exercise more."
                           <br /><strong className="tech">SwiftUI + Swift</strong>

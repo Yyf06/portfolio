@@ -18,8 +18,9 @@ import m3 from "./m3.png";
 import m4 from "./m4.png";
 import maze1 from "./maze1.png";
 import maze2 from "./maze2.png";
+import smartPark from "./smartPark.png"
 
 export {
     fg1, f1, fg2, fg3, fg5, fg6, fg7, fg8, fg9, t1, t2, t3, t5, t6, m1
-    , m2, m3, m4, maze1, maze2
+    , m2, m3, m4, maze1, maze2, smartPark
 };
