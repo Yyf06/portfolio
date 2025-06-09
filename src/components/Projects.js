@@ -4,8 +4,6 @@ import { fg1, f1, fg2, fg3, fg5, fg6, fg7, fg8, fg9 } from "../assets/img";
 import { t1, t2, t3, t5, t6 } from "../assets/img";
 import { m1, m2, m3, m4, maze1, maze2, smartPark } from "../assets/img";
 import farmVideo from '../assets/videos/farm.mp4';
-import smartVideo from '../assets/videos/smartpark.mp4';
-import menuVideo from '../assets/videos/menuscan.mp4';
 import fitnessVideo from '../assets/videos/fitnessgo.MP4';
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -166,13 +164,18 @@ export const Projects = () => {
                       <Tab.Pane eventKey="first">
                         <p>The internal admin system  was developed to centralize operations, enhance user management, and support data-driven decision-making. Built with React 18, TypeScript, and Ant Design, the project aimed to deliver a scalable and user-friendly platform that could grow with the company’s needs. Key features include reusable UI components, real-time dashboards, and secure role-based authentication, all designed to streamline workflows and improve overall system efficiency.</p>
 
-                        <div className="d-flex justify-content-center mb-5">
-                          <video width="100%" height="400px" controls>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                          <iframe
+                            width="100%"
+                            height="400px"
+                            src="https://youtu.be/FD0VUUo6okk"
+                            title="YouTube video player"
 
-                            <source src={smartVideo} type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
                         </div>
+
 
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
@@ -187,13 +190,16 @@ export const Projects = () => {
                           <li>Live view of the Orders and Change Order Status</li>
                           <li>Admin management of subscriptions</li></p>
 
-                        <div className="d-flex justify-content-center mb-5">
-                          <video width="100%" height="400px" controls>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                          <iframe
+                            width="100%"
+                            height="400px"
+                            src="https://www.youtube.com/embed/iuJwxTd3vgk"
+                            title="YouTube video player"
 
-                            <source src={menuVideo} type="video/mp4" />
-                            Your browser does not support the video tag. Please download the video
-                            <a href={menuVideo}>here</a>.
-                          </video>
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
                         </div>
 
                         <Row>
